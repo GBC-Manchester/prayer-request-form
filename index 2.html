@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prayer Request Form - Gospel Baptist Church</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      background: white;
+      color: #333;
+      line-height: 1.4;
+    }
+    .header, .footer {
+      text-align: center;
+      padding: 20px 0;
+    }
+    .church-name {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2c5aa0;
+    }
+    .form-title {
+      font-size: 20px;
+      color: #666;
+    }
+    .form-section {
+      margin-bottom: 25px;
+    }
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+    .form-row label {
+      flex: 1 0 120px;
+      font-weight: bold;
+    }
+    .form-row input, .text-area {
+      flex: 2 0 250px;
+      padding: 6px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .checkbox-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+    }
+    .checkbox-item input {
+      margin-right: 8px;
+    }
+    .text-area {
+      width: 100%;
+      min-height: 100px;
+      font-family: inherit;
+    }
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .action-button {
+      background: #2c5aa0;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="church-name">Gospel Baptist Church</div>
+    <div class="form-title">Prayer Request Form</div>
+    <p><em>"The effectual fervent prayer of a righteous man availeth much." - James 5:16</em></p>
+  </div>
+  <form action="https://formspree.io/f/xovwqeba" method="POST">
+    <div class="form-section">
+      <div class="form-row"><label>Name:</label><input type="text" name="name" required></div>
+      <div class="form-row"><label>Date:</label><input type="date" name="date" required></div>
+      <div class="form-row"><label>Phone:</label><input type="tel" name="phone"></div>
+      <div class="form-row"><label>Email:</label><input type="email" name="email" required></div>
+    </div>
+    <div class="form-section">
+      <p><strong>Type of Prayer Request:</strong></p>
+      <div class="checkbox-section">
+        <div class="checkbox-item"><input type="checkbox" name="requestType[]" value="Healing/Health"><label>Healing/Health</label></div>
+        <div class="checkbox-item"><input type="checkbox" name="requestType[]" value="Family Concerns"><label>Family Concerns</label></div>
+        <div class="checkbox-item"><input type="checkbox" name="requestType[]" value="Financial Needs"><label>Financial Needs</label></div>
+        <div class="checkbox-item"><input type="checkbox" name="requestType[]" value="Employment"><label>Employment</label></div>
+        <div class="checkbox-item"><input type="checkbox" name="requestType[]" value="Spiritual Growth"><label>Spiritual Growth</label></div>
+        <div class="checkbox-item"><input type="checkbox" name="requestType[]" value="Relationships"><label>Relationships</label></div>
+        <div class="checkbox-item"><input type="checkbox" name="requestType[]" value="Important Decisions"><label>Important Decisions</label></div>
+        <div class="checkbox-item"><input type="checkbox" name="requestType[]" value="Salvation"><label>Salvation</label></div>
+        <div class="checkbox-item"><input type="checkbox" name="requestType[]" value="Grief/Loss"><label>Grief/Loss</label></div>
+        <div class="checkbox-item"><input type="checkbox" name="requestType[]" value="Praise/Thanksgiving"><label>Praise/Thanksgiving</label></div>
+        <div class="checkbox-item"><input type="checkbox" name="requestType[]" value="Travel Safety"><label>Travel Safety</label></div>
+        <div class="checkbox-item"><input type="checkbox" name="requestType[]" value="Other"><label>Other</label></div>
+      </div>
+    </div>
+    <div class="form-section">
+      <label><strong>Please describe your prayer request:</strong></label><br>
+      <textarea class="text-area" name="prayerRequest" required></textarea>
+    </div>
+    <div class="form-section">
+      <p><strong>How can we best support you?</strong></p>
+      <div class="checkbox-section">
+        <div class="checkbox-item"><input type="checkbox" name="support[]" value="Pastoral Visit"><label>Pastoral Visit</label></div>
+        <div class="checkbox-item"><input type="checkbox" name="support[]" value="Phone Call"><label>Phone Call</label></div>
+        <div class="checkbox-item"><input type="checkbox" name="support[]" value="Prayer Only"><label>Prayer Only</label></div>
+        <div class="checkbox-item"><input type="checkbox" name="support[]" value="Practical Assistance"><label>Practical Assistance</label></div>
+      </div>
+    </div>
+    <div class="form-section">
+      <p><strong>Privacy & Sharing Preferences:</strong></p>
+      <div class="checkbox-section">
+        <div class="checkbox-item"><input type="checkbox" name="privacy[]" value="Confidential"><label>Keep confidential</label></div>
+        <div class="checkbox-item"><input type="checkbox" name="privacy[]" value="Share with prayer team"><label>Share with prayer team</label></div>
+        <div class="checkbox-item"><input type="checkbox" name="privacy[]" value="Share with congregation"><label>Share with congregation</label></div>
+      </div>
+    </div>
+    <div class="form-section">
+      <label><strong>Additional Comments:</strong></label><br>
+      <textarea class="text-area" name="additionalComments"></textarea>
+    </div>
+    <input type="hidden" name="_redirect" value="https://formspree.io/success">
+    <div class="button-container">
+      <button type="submit" class="action-button">Submit Prayer Request</button>
+    </div>
+  </form>
+  <div class="footer">
+    <p><strong>Gospel Baptist Church</strong> • "Proclaiming the Gospel, Building Disciples, Serving Others"</p>
+    <p><em>All prayer requests are treated with care and confidentiality according to your preferences above.</em></p>
+  </div>
+</body>
+</html>
